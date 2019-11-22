@@ -20,6 +20,7 @@ body {
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
+	font-family: 'Open Sans', sans-serif;
 }
 
 h1,
@@ -108,7 +109,6 @@ Właściwość "text-align: right" przykleja zawartość do prawej strony
 .page-content {
 	margin-left: 220px;
 	padding: 0 10%;
-	text-align: right;
 }
 
 /*
@@ -125,6 +125,26 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 
 .band-members {
 	display: flex;
-	justify-content: center;
-	font-size: 16px;
+	color: rgba(204, 200, 255, 0.8);
+
+	letter-spacing: 3px;
+	word-spacing: 5px;
+}
+
+.band-members__name {
+	font-weight: 700;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+
+.band-members__desc {
+	color: rgba(204, 200, 255, 0.5);
+	font-weight: 400;
+	font-size: 13px;
+}
+
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
