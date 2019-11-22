@@ -16,6 +16,10 @@ body {
 	margin: 0;
 	padding: 0;
 	background-image: url('images/background.svg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
 }
 
 h1,
@@ -50,7 +54,7 @@ Więcej na ten temat: https://webaim.org/techniques/css/invisiblecontent/
 /*
 Sekcja pomocnicza, aby zwizualizować pozycje głównych bloków strony. Będzie usunięta w następnych krokach.
 */
-.page-header {
+/* .page-header {
 	background-color: #ffb1b1;
 }
 
@@ -67,7 +71,7 @@ Sekcja pomocnicza, aby zwizualizować pozycje głównych bloków strony. Będzie
 }
 .content-section:nth-child(odd) {
 	background-color: #e69fe6;
-}
+} */
 /*
 Koniec sekcji pomocniczej
 */
@@ -115,4 +119,12 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 */
 .content-section {
 	min-height: 100vh;
+}
+
+/*---------------------------------------- moje ---------------------------*/
+
+.band-members {
+	display: flex;
+	justify-content: center;
+	font-size: 16px;
 }
