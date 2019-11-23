@@ -230,9 +230,11 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 
 .concerts__info {
 	margin: 20px 0;
+	display: flex;
+	justify-content: space-between;
 }
 
-.concerts__info > p {
+.concerts__data > p {
 	float: left;
 	margin: 0;
 }
@@ -252,12 +254,14 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 	color: #ccc8ff;
 	font-size: 15px;
 	font-weight: 700;
+	margin: 0;
 }
 
 .concerts__location {
 	color: rgba(204, 200, 255, 0.8);
 	clear: both;
 	font-size: 13px;
+	margin: 0;
 }
 
 .concerts-section {
@@ -284,7 +288,7 @@ iframe {
 	min-height: 1200px;
 }
 
-.contact-section > img {
+.gallery__image {
 	width: 40vw;
 	border: none;
 	float: left;
@@ -303,10 +307,16 @@ iframe {
 	float: left;
 }
 
+.contact-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 address {
 	color: #ccc8ff;
 	display: inline-block;
-	padding: 12vw 0 0 10vw;
+	width: 500px;
 }
 
 .form__input {
