@@ -222,7 +222,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   float: right;
 }
 
-.concerts__image {
+.concerts__image, .gallery__image {
 	max-width: 100%;
 	height: auto;
 	border-bottom: 5px solid #ef008e;
@@ -260,6 +260,21 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 	font-size: 13px;
 }
 
-.content-section {
+.concerts-section {
 	min-height: 1100px;
 }
+
+iframe {
+	float: right;
+	border-top: 5px solid #ef008e;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);  
+	grid-template-rows: repeat(3, auto);
+	column-gap: 20px;
+	row-gap: 20px;
+	float: right;
+}
+
