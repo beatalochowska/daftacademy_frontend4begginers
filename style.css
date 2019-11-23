@@ -267,6 +267,8 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 iframe {
 	float: right;
 	border-top: 5px solid #ef008e;
+	width: 60vw;
+	height: 80vh;
 }
 
 .gallery {
@@ -278,3 +280,43 @@ iframe {
 	float: right;
 }
 
+.photos-section {
+	min-height: 1200px;
+}
+
+.contact-section > img {
+	width: 40vw;
+	border: none;
+	float: left;
+}
+
+.form {
+	clear: both;
+	padding: 40px 0;
+}
+
+.form__field > * {
+	margin: 20px 0;
+}
+
+.form__field > button {
+	float: left;
+}
+
+address {
+	color: #ccc8ff;
+	display: inline-block;
+	padding: 12vw 0 0 10vw;
+}
+
+.form__input {
+	display: block;
+	background-color: #25072e;
+	border-radius: 8px;
+	border: none;
+	height: 30px;
+	width: 250px;
+}
+.form__label {
+	color: #ccc8ff;
+}
