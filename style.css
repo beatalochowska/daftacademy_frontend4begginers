@@ -120,6 +120,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 */
 .content-section {
 	min-height: 100vh;
+	display: block;
 }
 
 /*---------------------------------------- moje ---------------------------*/
@@ -143,7 +144,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 	font-size: 13px;
 }
 
-.content-section {
+.home-section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -166,4 +167,99 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 	text-decoration: none;
 	color: #ef008e;
 	font-size: 28px;
+}
+
+/* ----------- ABOUT -------------------------*/
+
+.content-section > h2 {
+	display: block;
+	text-align: end;
+	color: #ef008e;
+	font-size: 28px;
+	text-transform: uppercase;
+	margin: 75px 0;
+}
+
+.content-section > img {
+	float: right;
+	border-top: 5px solid #ef008e;
+}
+
+.about-section {
+	position: relative;
+	min-height: 900px;
+}
+
+.about-section__desc {
+	position: absolute;
+	background-color: #25072e;
+	padding: 40px;
+	width: 450px;
+	height: 450px;
+	top: 400px;
+	left: 250px;
+	border-bottom: 5px solid #ef008e;
+}
+
+.about-section__desc-header {
+	color: #ccc8ff;
+	text-transform: uppercase;
+	font-size: 15px;
+}
+
+.about-section__desc-details {
+	color: rgba(204, 200, 255, 0.8);
+	font-size: 13px;
+
+}
+
+.concerts {
+	display: grid;
+  grid-template-columns: repeat(2, 500px);  
+  grid-template-rows: repeat(2, auto);
+  column-gap: 100px;
+  row-gap: 40px;
+  float: right;
+}
+
+.concerts__image {
+	max-width: 100%;
+	height: auto;
+	border-bottom: 5px solid #ef008e;
+}
+
+.concerts__info {
+	margin: 20px 0;
+}
+
+.concerts__info > p {
+	float: left;
+	margin: 0;
+}
+
+.button {
+	float: right;
+	background-color: #25072e;
+	color: rgba(204, 200, 255, 0.5);
+	border: none;
+	padding: 10px;
+	border-radius: 8px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.concerts__date {
+	color: #ccc8ff;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.concerts__location {
+	color: rgba(204, 200, 255, 0.8);
+	clear: both;
+	font-size: 13px;
+}
+
+.content-section {
+	min-height: 1100px;
 }
