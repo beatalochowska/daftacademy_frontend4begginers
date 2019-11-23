@@ -21,6 +21,7 @@ body {
 	background-position: center;
 	background-size: cover;
 	font-family: 'Open Sans', sans-serif;
+
 }
 
 h1,
@@ -124,14 +125,13 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 /*---------------------------------------- moje ---------------------------*/
 
 .band-members {
-	display: flex;
-	color: rgba(204, 200, 255, 0.8);
-
+	display: flex;	
 	letter-spacing: 3px;
-	word-spacing: 5px;
+	word-spacing: 3px;
 }
 
 .band-members__name {
+	color: rgba(204, 200, 255, 0.8);
 	font-weight: 700;
 	font-size: 15px;
 	text-transform: uppercase;
@@ -147,4 +147,23 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.page-navigation__item > a  {
+	text-decoration: none;
+	color: #ef008e;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 13px;
+	letter-spacing: 7px;
+}
+
+.page-navigation__item {
+	padding: 5px 0;
+}
+
+.social-links__item > a {
+	text-decoration: none;
+	color: #ef008e;
+	font-size: 28px;
 }
