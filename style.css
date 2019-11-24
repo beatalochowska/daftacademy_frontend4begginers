@@ -205,12 +205,17 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 	color: #ccc8ff;
 	text-transform: uppercase;
 	font-size: 15px;
+	letter-spacing: 7px;
+	word-spacing: 7px;
+	padding-bottom: 30px;
 }
 
 .about-section__desc-details {
 	color: rgba(204, 200, 255, 0.8);
 	font-size: 13px;
-
+	letter-spacing: 4px;
+	word-spacing: 4px;
+	line-height: 150%;
 }
 
 .concerts {
@@ -237,6 +242,8 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 .concerts__data > p {
 	float: left;
 	margin: 0;
+	letter-spacing: 4px;
+	word-spacing: 4px;
 }
 
 .button {
@@ -244,8 +251,8 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 	background-color: #25072e;
 	color: rgba(204, 200, 255, 0.5);
 	border: none;
-	padding: 10px;
-	border-radius: 8px;
+	padding: 15px;
+	border-radius: 4px;
 	text-transform: uppercase;
 	font-weight: 600;
 }
@@ -255,6 +262,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 	font-size: 15px;
 	font-weight: 700;
 	margin: 0;
+
 }
 
 .concerts__location {
@@ -282,6 +290,7 @@ iframe {
 	column-gap: 20px;
 	row-gap: 20px;
 	float: right;
+	
 }
 
 .photos-section {
@@ -292,6 +301,7 @@ iframe {
 	width: 40vw;
 	border: none;
 	float: left;
+	border-top: 5px solid #ef008e;
 }
 
 .form {
@@ -311,10 +321,11 @@ iframe {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	
 }
 
 address {
-	color: #ccc8ff;
+	color: rgba(204, 200, 255, 0.8);
 	display: inline-block;
 	width: 500px;
 }
@@ -322,11 +333,11 @@ address {
 .form__input {
 	display: block;
 	background-color: #25072e;
-	border-radius: 8px;
+	border-radius: 4px;
 	border: none;
-	height: 30px;
-	width: 250px;
+	height: 50px;
+	width: 350px;
 }
 .form__label {
-	color: #ccc8ff;
+	color: rgba(204, 200, 255, 0.8);
 }
