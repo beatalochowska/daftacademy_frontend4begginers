@@ -243,13 +243,28 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   line-height: 150%;
 }
 
-.concerts {
-  display: grid;
-  grid-template-columns: repeat(2, 500px);
-  grid-template-rows: repeat(2, auto);
-  column-gap: 100px;
-  row-gap: 40px;
-  float: right;
+@supports (display: grid) {
+  .concerts {
+    display: grid;
+    grid-template-columns: repeat(2, 30vw);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 6vw;
+    row-gap: 3vw;
+    float: right;
+  }
+}
+
+@supports not (display: grid) {
+  .concerts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 66vw;
+    margin-left: auto;
+  }
+  .concerts__item {
+    margin-bottom: 3vw;
+  }
 }
 
 .concerts__image,
@@ -260,6 +275,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 .concerts__image,
 .gallery__image {
   border-bottom: 5px solid #ef008e;
+  width: 30vw;
 }
 
 .gallery__item > .gallery__image:hover {
