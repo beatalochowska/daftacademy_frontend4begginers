@@ -150,7 +150,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
     justify-content: center;
 }
 
-.page-navigation__item > a  {
+.page-navigation__title  {
 	text-decoration: none;
 	color: #ef008e;
 	text-transform: uppercase;
@@ -163,7 +163,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 	padding: 5px 0;
 }
 
-.social-links__item > a {
+.social-links__link {
 	text-decoration: none;
 	color: #ef008e;
 	font-size: 28px;
@@ -171,16 +171,17 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 
 /* ----------- ABOUT -------------------------*/
 
-.content-section > h2 {
+.content-section__header {
 	display: block;
 	text-align: end;
 	color: #ef008e;
 	font-size: 28px;
 	text-transform: uppercase;
 	margin: 75px 0;
+	letter-spacing: 7px;
 }
 
-.content-section > img {
+.about-section__img {
 	float: right;
 	border-top: 5px solid #ef008e;
 }
@@ -219,7 +220,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 }
 
 .concerts {
-	display: grid;
+  display: grid;
   grid-template-columns: repeat(2, 500px);  
   grid-template-rows: repeat(2, auto);
   column-gap: 100px;
@@ -230,8 +231,11 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 .concerts__image, .gallery__image {
 	max-width: 100%;
 	height: auto;
+}
+.concerts__image, .gallery__image {
 	border-bottom: 5px solid #ef008e;
 }
+
 
 .concerts__info {
 	margin: 20px 0;
@@ -239,7 +243,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 	justify-content: space-between;
 }
 
-.concerts__data > p {
+.concerts__data {
 	float: left;
 	margin: 0;
 	letter-spacing: 4px;
@@ -248,13 +252,15 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 
 .button {
 	float: right;
-	background-color: #25072e;
-	color: rgba(204, 200, 255, 0.5);
+	background-color: rgba(204, 200, 255, 0.1);
+	color: rgba(204, 200, 255, 0.8);
 	border: none;
 	padding: 15px;
 	border-radius: 4px;
 	text-transform: uppercase;
-	font-weight: 600;
+	font-size: 15px;
+	font-weight: 500;
+	letter-spacing: 3px;
 }
 
 .concerts__date {
@@ -276,7 +282,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 	min-height: 1100px;
 }
 
-iframe {
+.video {
 	float: right;
 	border-top: 5px solid #ef008e;
 	width: 60vw;
@@ -297,12 +303,6 @@ iframe {
 	min-height: 1200px;
 }
 
-.gallery__image {
-	width: 40vw;
-	border: none;
-	float: left;
-	border-top: 5px solid #ef008e;
-}
 
 .form {
 	clear: both;
@@ -313,26 +313,33 @@ iframe {
 	margin: 20px 0;
 }
 
-.form__field > button {
+.form__field > .button {
 	float: left;
+	background-color: rgba(204, 200, 255, 0.1);
 }
 
 .contact-info {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	
+	align-items: center;	
 }
 
-address {
+.contact-info > .gallery__image{
+	border: none;
+	width: 40vw;
+}
+
+.contact-info__adress {
+	font-style: normal;
 	color: rgba(204, 200, 255, 0.8);
 	display: inline-block;
 	width: 500px;
+	letter-spacing: 3px;
 }
 
 .form__input {
 	display: block;
-	background-color: #25072e;
+	background-color: rgba(204, 200, 255, 0.1);
 	border-radius: 4px;
 	border: none;
 	height: 50px;
