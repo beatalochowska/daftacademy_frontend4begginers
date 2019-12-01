@@ -9,31 +9,30 @@ Więcej na ten temat: https://cssreset.com/what-is-a-css-reset/
 */
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	background-image: url('images/background.svg');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
-	background-size: cover;
-	font-family: 'Open Sans', sans-serif;
-
+  margin: 0;
+  padding: 0;
+  background-image: url("images/background.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
 }
 
 h1,
 h2,
 h3 {
-	margin: 0;
+  margin: 0;
 }
 
 ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /*
@@ -45,12 +44,12 @@ Rekomendowany zestaw właściwości, które pozwalają na ukrycie tekstu w taki 
 Więcej na ten temat: https://webaim.org/techniques/css/invisiblecontent/
 */
 .screen-reader-only {
-	position: absolute;
-	left: -10000px;
-	top: auto;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 /*
@@ -85,15 +84,15 @@ w tej samej pozycji względem okna przeglądarki.
 Natomiast pozycję tę ustawiamy za pomocą parametrów 'top', 'bottom', 'right', 'left'.
 */
 .page-header {
-	position: fixed;
-	top: 50px;
-	left: 50px;
+  position: fixed;
+  top: 50px;
+  left: 50px;
 }
 
 .page-footer {
-	position: fixed;
-	bottom: 50px;
-	left: 50px;
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
 }
 
 /*
@@ -108,8 +107,8 @@ Właściwość "text-align: right" przykleja zawartość do prawej strony
 (oddziałuje na elementy, które są elementami inline'owymi, np. tekst, znaczniki <a>, <span> czy elementy z nadanym stylem "display: inline-block").
 */
 .page-content {
-	margin-left: 220px;
-	padding: 0 10%;
+  margin-left: 220px;
+  padding: 0 10%;
 }
 
 /*
@@ -119,232 +118,267 @@ będzie użycie jednostki "vh", która oznacza 1% wysokości okna przeglądarki 
 która wymusza wysokość elementu na zadaną wartość lub wyższą.
 */
 .content-section {
-	min-height: 100vh;
-	display: block;
+  min-height: 100vh;
+  display: block;
 }
 
 /*---------------------------------------- moje ---------------------------*/
 
 .band-members {
-	display: flex;	
-	letter-spacing: 3px;
-	word-spacing: 3px;
+  display: flex;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+}
+
+.band-members__image {
+  opacity: 60%;
+}
+
+.band-members__image:hover {
+  opacity: 100%;
 }
 
 .band-members__name {
-	color: rgba(204, 200, 255, 0.8);
-	font-weight: 700;
-	font-size: 15px;
-	text-transform: uppercase;
+  color: rgba(204, 200, 255, 0.8);
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
 }
 
 .band-members__desc {
-	color: rgba(204, 200, 255, 0.5);
-	font-weight: 400;
-	font-size: 13px;
+  color: rgba(204, 200, 255, 0.5);
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.band-members__description {
+  opacity: 0;
+}
+
+.band-members__image:hover + .band-members__description {
+  opacity: 100%;
 }
 
 .home-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.page-navigation__title  {
-	text-decoration: none;
-	color: #ef008e;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 13px;
-	letter-spacing: 7px;
+.page-navigation__title {
+  text-decoration: none;
+  color: rgba(239, 0, 142, 0.6);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 6px;
+}
+
+.page-navigation__title:hover {
+  color: rgb(239, 0, 142);
+  letter-spacing: 7px;
 }
 
 .page-navigation__item {
-	padding: 5px 0;
+  padding: 5px 0;
 }
 
 .social-links__link {
-	text-decoration: none;
-	color: #ef008e;
-	font-size: 28px;
+  text-decoration: none;
+  color: rgba(239, 0, 142, 0.6);
+  font-size: 28px;
+}
+
+.social-links__link:hover {
+  color: rgb(239, 0, 142);
 }
 
 /* ----------- ABOUT -------------------------*/
 
 .content-section__header {
-	display: block;
-	text-align: end;
-	color: #ef008e;
-	font-size: 28px;
-	text-transform: uppercase;
-	margin: 75px 0;
-	letter-spacing: 7px;
+  display: block;
+  text-align: end;
+  color: #ef008e;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin: 75px 0;
+  letter-spacing: 7px;
 }
 
 .about-section__img {
-	float: right;
-	border-top: 5px solid #ef008e;
+  float: right;
+  border-top: 5px solid #ef008e;
 }
 
 .about-section {
-	position: relative;
-	min-height: 900px;
+  position: relative;
+  min-height: 900px;
 }
 
 .about-section__desc {
-	position: absolute;
-	background-color: #25072e;
-	padding: 40px;
-	width: 450px;
-	height: 450px;
-	top: 400px;
-	left: 250px;
-	border-bottom: 5px solid #ef008e;
+  position: absolute;
+  background-color: #25072e;
+  padding: 40px;
+  width: 450px;
+  height: 450px;
+  top: 400px;
+  left: 250px;
+  border-bottom: 5px solid #ef008e;
 }
 
 .about-section__desc-header {
-	color: #ccc8ff;
-	text-transform: uppercase;
-	font-size: 15px;
-	letter-spacing: 7px;
-	word-spacing: 7px;
-	padding-bottom: 30px;
+  color: #ccc8ff;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 7px;
+  word-spacing: 7px;
+  padding-bottom: 30px;
 }
 
 .about-section__desc-details {
-	color: rgba(204, 200, 255, 0.8);
-	font-size: 13px;
-	letter-spacing: 4px;
-	word-spacing: 4px;
-	line-height: 150%;
+  color: rgba(204, 200, 255, 0.8);
+  font-size: 13px;
+  letter-spacing: 4px;
+  word-spacing: 4px;
+  line-height: 150%;
 }
 
 .concerts {
   display: grid;
-  grid-template-columns: repeat(2, 500px);  
+  grid-template-columns: repeat(2, 500px);
   grid-template-rows: repeat(2, auto);
   column-gap: 100px;
   row-gap: 40px;
   float: right;
 }
 
-.concerts__image, .gallery__image {
-	max-width: 100%;
-	height: auto;
+.concerts__image,
+.gallery__image {
+  max-width: 100%;
+  height: auto;
 }
-.concerts__image, .gallery__image {
-	border-bottom: 5px solid #ef008e;
+.concerts__image,
+.gallery__image {
+  border-bottom: 5px solid #ef008e;
 }
 
+.gallery__item > .gallery__image:hover {
+  transform: scale(1.05);
+}
 
 .concerts__info {
-	margin: 20px 0;
-	display: flex;
-	justify-content: space-between;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .concerts__data {
-	float: left;
-	margin: 0;
-	letter-spacing: 4px;
-	word-spacing: 4px;
+  float: left;
+  margin: 0;
+  letter-spacing: 4px;
+  word-spacing: 4px;
 }
 
 .button {
-	float: right;
-	background-color: rgba(204, 200, 255, 0.1);
-	color: rgba(204, 200, 255, 0.8);
-	border: none;
-	padding: 15px;
-	border-radius: 4px;
-	text-transform: uppercase;
-	font-size: 15px;
-	font-weight: 500;
-	letter-spacing: 3px;
+  float: right;
+  background-color: rgba(204, 200, 255, 0.1);
+  color: rgba(204, 200, 255, 0.8);
+  border: none;
+  padding: 15px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.button:hover {
+  background-color: rgba(204, 200, 255, 0.5);
 }
 
 .concerts__date {
-	color: #ccc8ff;
-	font-size: 15px;
-	font-weight: 700;
-	margin: 0;
-
+  color: #ccc8ff;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
 }
 
 .concerts__location {
-	color: rgba(204, 200, 255, 0.8);
-	clear: both;
-	font-size: 13px;
-	margin: 0;
+  color: rgba(204, 200, 255, 0.8);
+  clear: both;
+  font-size: 13px;
+  margin: 0;
 }
 
 .concerts-section {
-	min-height: 1100px;
+  min-height: 1100px;
 }
 
 .video {
-	float: right;
-	border-top: 5px solid #ef008e;
-	width: 60vw;
-	height: 80vh;
+  float: right;
+  border-top: 5px solid #ef008e;
+  width: 60vw;
+  height: 80vh;
 }
 
 .gallery {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);  
-	grid-template-rows: repeat(3, auto);
-	column-gap: 20px;
-	row-gap: 20px;
-	float: right;
-	
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  column-gap: 20px;
+  row-gap: 20px;
+  float: right;
 }
 
 .photos-section {
-	min-height: 1200px;
+  min-height: 1200px;
 }
 
-
 .form {
-	clear: both;
-	padding: 40px 0;
+  clear: both;
+  padding: 40px 0;
 }
 
 .form__field > * {
-	margin: 20px 0;
+  margin: 20px 0;
 }
 
 .form__field > .button {
-	float: left;
-	background-color: rgba(204, 200, 255, 0.1);
+  float: left;
+  background-color: rgba(204, 200, 255, 0.1);
+}
+
+.form__field > .button:hover {
+  background-color: rgba(204, 200, 255, 0.5);
 }
 
 .contact-info {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;	
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.contact-info > .gallery__image{
-	border: none;
-	width: 40vw;
+.contact-info > .gallery__image {
+  border: none;
+  width: 40vw;
 }
 
 .contact-info__adress {
-	font-style: normal;
-	color: rgba(204, 200, 255, 0.8);
-	display: inline-block;
-	width: 500px;
-	letter-spacing: 3px;
+  font-style: normal;
+  color: rgba(204, 200, 255, 0.8);
+  display: inline-block;
+  width: 500px;
+  letter-spacing: 3px;
 }
 
 .form__input {
-	display: block;
-	background-color: rgba(204, 200, 255, 0.1);
-	border-radius: 4px;
-	border: none;
-	height: 50px;
-	width: 350px;
+  display: block;
+  background-color: rgba(204, 200, 255, 0.1);
+  border-radius: 4px;
+  border: none;
+  height: 50px;
+  width: 350px;
 }
 .form__label {
-	color: rgba(204, 200, 255, 0.8);
+  color: rgba(204, 200, 255, 0.8);
 }
