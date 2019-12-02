@@ -395,3 +395,29 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 .form__label {
   color: rgba(204, 200, 255, 0.8);
 }
+
+@media (max-width: 360px) {
+  .page-header {
+    position: static;
+    margin: 10px;
+  }
+  .page-footer {
+    position: static;
+    margin: 10px auto;
+  }
+  .page-content{
+    margin: 0;
+    padding: 0;
+  }
+  .band-members {
+    flex-direction: column;
+  }
+  .band-members__image {
+    opacity: 100%;
+    max-height: 250px;
+  }
+  
+  .band-members__description {
+    opacity: 100%;
+  }
+}
