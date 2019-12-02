@@ -126,6 +126,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 
 .band-members {
   display: flex;
+  flex-wrap: wrap;
   letter-spacing: 3px;
   word-spacing: 3px;
 }
@@ -396,6 +397,8 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   color: rgba(204, 200, 255, 0.8);
 }
 
+@media (max-width: 1200px) {
+
 @media (max-width: 360px) {
   .page-header {
     position: static;
@@ -501,3 +504,4 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   .social-links {
     clear: both;
   }
+}
