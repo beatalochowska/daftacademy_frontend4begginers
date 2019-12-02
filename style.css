@@ -121,8 +121,6 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   display: block;
 }
 
-/*---------------------------------------- moje ---------------------------*/
-
 .band-members {
   display: flex;
   flex-wrap: wrap;
@@ -194,8 +192,6 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   color: rgb(239, 0, 142);
 }
 
-/* ----------- ABOUT -------------------------*/
-
 .content-section__header {
   display: block;
   text-align: end;
@@ -264,6 +260,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
     width: 66vw;
     margin-left: auto;
   }
+
   .concerts__item {
     margin-bottom: 3vw;
   }
@@ -392,6 +389,13 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   color: rgba(204, 200, 255, 0.8);
 }
 
+@media (max-width: 1500px) {
+  .band-members {
+    max-width: 580px;
+    margin-top: 100px;
+  }
+}
+
 @media (max-width: 1200px) {
   .about-section__desc {
     position: static;
@@ -400,6 +404,11 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
     height: auto;
     margin-left: auto;
     margin-top: 15px;
+    padding: 15px;
+  }
+
+  .about-section__desc-header {
+    padding-bottom: 0;
   }
 
   .concerts {
@@ -439,13 +448,40 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 
   .contact-info__adress {
     width: auto;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .band-members {
+    max-width: 300px;
   }
 }
 @media (max-width: 650px) {
   .form__input {
     width: 40vw;
   }
+
+  .about-section__img {
+    width: 40vw;
+  }
+
+  .about-section__desc {
+    width: 40vw;
+  }
+  .concerts__item > .concerts__image {
+    width: 40vw;
+  }
+
+  .concerts__item > .concerts__info {
+    width: 40vw;
+  }
+
+  .video {
+    width: 40vw;
+  }
 }
+
 @media (max-width: 360px) {
   .page-header {
     position: static;
@@ -508,10 +544,6 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
     width: 300px;
     height: 200px;
     margin: 0 30px;
-  }
-
-  .gallery {
-    display: block;
   }
 
   .concerts__item > .concerts__image {
