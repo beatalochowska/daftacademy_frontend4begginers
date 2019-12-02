@@ -220,8 +220,8 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   position: absolute;
   background-color: #25072e;
   padding: 40px;
-  width: 30vw;
-  height: auto;
+  width: 500px;
+  height: 400px;
   top: 400px;
   left: 250px;
   border-bottom: 5px solid #ef008e;
@@ -247,7 +247,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 @supports (display: grid) {
   .concerts {
     display: grid;
-    grid-template-columns: repeat(2, 30vw);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
     column-gap: 6vw;
     row-gap: 3vw;
@@ -271,12 +271,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 .concerts__image,
 .gallery__image {
   max-width: 100%;
-  height: auto;
-}
-.concerts__image,
-.gallery__image {
   border-bottom: 5px solid #ef008e;
-  width: 30vw;
 }
 
 .gallery__item > .gallery__image:hover {
@@ -284,29 +279,30 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 }
 
 .concerts__info {
-  margin: 20px 0;
   display: flex;
-  justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10px;
+    
 }
 
 .concerts__data {
-  float: left;
-  margin: 0;
-  letter-spacing: 4px;
-  word-spacing: 4px;
+  flex-grow: 1;
 }
+
 
 .button {
   float: right;
   background-color: rgba(204, 200, 255, 0.1);
+  border-color: rgba(204, 200, 255, 0.1);
   color: rgba(204, 200, 255, 0.8);
-  border: none;
-  padding: 15px;
-  border-radius: 4px;
+  padding: 7px 15px;
+  border-radius: 3px;
   text-transform: uppercase;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -316,14 +312,14 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 .concerts__date {
   color: #ccc8ff;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
   margin: 0;
 }
 
 .concerts__location {
   color: rgba(204, 200, 255, 0.8);
-  clear: both;
-  font-size: 13px;
   margin: 0;
 }
 
