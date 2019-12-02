@@ -118,7 +118,6 @@ będzie użycie jednostki "vh", która oznacza 1% wysokości okna przeglądarki 
 która wymusza wysokość elementu na zadaną wartość lub wyższą.
 */
 .content-section {
-  min-height: 100vh;
   display: block;
 }
 
@@ -161,6 +160,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 }
 
 .home-section {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -208,6 +208,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 
 .about-section__img {
   width: 50vw;
+  display: block;
   margin-left: auto;
   border-top: 5px solid #ef008e;
 }
@@ -223,8 +224,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   padding: 40px;
   width: 500px;
   height: 400px;
-  top: 400px;
-  left: 250px;
+  top: 500px;
   border-bottom: 5px solid #ef008e;
 }
 
@@ -271,26 +271,24 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 
 .concerts__image,
 .gallery__image {
-  max-width: 100%;
+  width: 100%;
   border-bottom: 5px solid #ef008e;
 }
 
-.gallery__item > .gallery__image:hover {
+.gallery__item > .concerts__image:hover {
   transform: scale(1.05);
 }
 
 .concerts__info {
   display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-top: 10px;
-    
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10px;
 }
 
 .concerts__data {
   flex-grow: 1;
 }
-
 
 .button {
   float: right;
@@ -324,15 +322,12 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   margin: 0;
 }
 
-.concerts-section {
-  min-height: 1100px;
-}
-
 .video {
+  display: block;
   margin-left: auto;
   border-top: 5px solid #ef008e;
-  width: 66vw;
-  height: 80vh;
+  width: 50vw;
+  height: 25vw;
 }
 
 .gallery {
@@ -342,10 +337,6 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   column-gap: 20px;
   row-gap: 20px;
   margin-left: auto;
-}
-
-.photos-section {
-  min-height: 1200px;
 }
 
 .form {
@@ -368,7 +359,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 
 .contact-info {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -381,13 +372,17 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   font-style: normal;
   color: rgba(204, 200, 255, 0.8);
   display: inline-block;
-  width: 500px;
+  width: auto;
+  padding: 30px;
   letter-spacing: 3px;
 }
 
 .form__input {
   display: block;
   background-color: rgba(204, 200, 255, 0.1);
+  color: rgb(204, 200, 255);
+  font-size: 15px;
+  padding-left: 10px;
   border-radius: 4px;
   border: none;
   height: 50px;
@@ -398,7 +393,59 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 }
 
 @media (max-width: 1200px) {
+  .about-section__desc {
+    position: static;
+    display: block;
+    width: 50vw;
+    height: auto;
+    margin-left: auto;
+    margin-top: 15px;
+  }
 
+  .concerts {
+    display: block;
+  }
+
+  .gallery {
+    display: block;
+  }
+
+  .concerts__item > .concerts__image {
+    display: block;
+    margin-left: auto;
+    width: 45vw;
+  }
+
+  .concerts__item > .concerts__info {
+    width: 45vw;
+    margin-left: auto;
+    margin-bottom: 30px;
+  }
+
+  .gallery__item > .concerts__image {
+    margin-bottom: 30px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-info > .gallery__image {
+    display: block;
+    width: 40vw;
+    margin: 15px 0;
+  }
+
+  .contact-info__adress {
+    width: auto;
+  }
+}
+@media (max-width: 650px) {
+  .form__input {
+    width: 40vw;
+  }
+}
 @media (max-width: 360px) {
   .page-header {
     position: static;
@@ -407,7 +454,6 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   .page-footer {
     position: static;
     margin: 10px auto;
-
   }
 
   .social-links {
@@ -415,17 +461,17 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
     flex-direction: row;
     justify-content: space-around;
   }
-  .page-content{
+  .page-content {
     margin: 0;
     padding: 0;
   }
 
-  .content-section__header{
+  .content-section__header {
     margin: 30px;
   }
   .band-members {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
   .band-members__image {
     opacity: 100%;
@@ -463,20 +509,22 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
     height: 200px;
     margin: 0 30px;
   }
-  .video-section {
-    min-height: fit-content;
-  }
 
   .gallery {
     display: block;
   }
 
-  .concerts__image {
+  .concerts__item > .concerts__image {
     width: 300px;
   }
 
   .gallery__item > .concerts__image {
+    width: 300px;
     margin: 15px 30px;
+  }
+
+  .concerts__item > .concerts__info {
+    width: 300px;
   }
 
   .contact-info {
@@ -491,6 +539,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 
   .contact-info__adress {
     width: auto;
+    margin: 0 30px;
   }
 
   .form {
