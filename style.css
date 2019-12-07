@@ -1,18 +1,9 @@
-/*
-Przeglądarki internetowe nadają znacznikom HTML wartości początkowe,
-które się różnią w zależności od producenta (np. Chrome, Firefox, Opera, Internet Explorer, Microsoft Edge).
-Dlatego popularną praktyką jest tworzenie tzw. resetów,
-czyli plików CSS zawierających reguły, które nadpisują te wartości,
-aby były one jednolite niezalenie od przeglądarki.
-
-Więcej na ten temat: https://cssreset.com/what-is-a-css-reset/
-*/
-
 * {
   box-sizing: border-box;
 }
 
 body {
+  background-color: #25072e;
   margin: 0;
   padding: 0;
   background-image: url("images/background.svg");
@@ -35,14 +26,6 @@ ul {
   padding: 0;
 }
 
-/*
-ZAGADNIENIE PONADPROGRAMOWE
-
-Rekomendowany zestaw właściwości, które pozwalają na ukrycie tekstu w taki sposób,
-że będzie niewidoczny do standardowego użytkownika, a czytniki ekranowe wciąż będą go czytać.
-
-Więcej na ten temat: https://webaim.org/techniques/css/invisiblecontent/
-*/
 .screen-reader-only {
   position: absolute;
   left: -10000px;
@@ -52,37 +35,6 @@ Więcej na ten temat: https://webaim.org/techniques/css/invisiblecontent/
   overflow: hidden;
 }
 
-/*
-Sekcja pomocnicza, aby zwizualizować pozycje głównych bloków strony. Będzie usunięta w następnych krokach.
-*/
-/* .page-header {
-	background-color: #ffb1b1;
-}
-
-.page-content {
-	background-color: #b0ffb0;
-}
-
-.page-footer {
-	background-color: #7ba3ff;
-}
-
-.content-section {
-	background-color: #ca9aca;
-}
-.content-section:nth-child(odd) {
-	background-color: #e69fe6;
-} */
-/*
-Koniec sekcji pomocniczej
-*/
-
-/*
-Ustawiając sekcje nagłówka i stopki w pozycji 'fixed' sprawiamy,
-że niezależnie od pozycji paska przewijania elementy te będą znajdowały się
-w tej samej pozycji względem okna przeglądarki.
-Natomiast pozycję tę ustawiamy za pomocą parametrów 'top', 'bottom', 'right', 'left'.
-*/
 .page-header {
   position: fixed;
   top: 50px;
@@ -95,31 +47,16 @@ Natomiast pozycję tę ustawiamy za pomocą parametrów 'top', 'bottom', 'right'
   left: 50px;
 }
 
-/*
-Lewy margines ustawiony na kontenerze z główną zawartością strony sprawia,
-że nie będzie ona nachodzić na nagłówek i stopkę niezależnie od pozycji paska przewijania.
-Na projekcie graficznym sekcja menu ma szerokość około 170px i jest oddalona od krawędzi ekranu
-o 50px, więc można założyć, że 220px marginesu będzie wartością stosunkowo bezpieczną.
-Z kolei spady (padding) nadane na kontener wyznaczają minimalną odległość, na jaką będzie oddalona
-treść strony od otaczających ją granic kontenera (wartość "0 10%" jest
-skrótem od padding-top: 0, padding-bottom: 0, padding-left: 10%, padding-right: 10%).
-Właściwość "text-align: right" przykleja zawartość do prawej strony
-(oddziałuje na elementy, które są elementami inline'owymi, np. tekst, znaczniki <a>, <span> czy elementy z nadanym stylem "display: inline-block").
-*/
 .page-content {
   margin-left: 220px;
   padding: 0 10%;
 }
 
-/*
-Projekt graficzny zakłada, że każda sekcja strony będzie wypełniać całą wysokość okna przeglądarki
-lub więcej, jeśli zawartość danej sekcji jest wyższa. Dlatego świetnym rozwiązaniem
-będzie użycie jednostki "vh", która oznacza 1% wysokości okna przeglądarki z właściwością "min-height",
-która wymusza wysokość elementu na zadaną wartość lub wyższą.
-*/
 .content-section {
   display: block;
 }
+
+/* HOME --------------------------------------------------------------- */
 
 .band-members {
   display: flex;
@@ -164,6 +101,8 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   justify-content: center;
 }
 
+/* MENU --------------------------------------------- */
+
 .page-navigation__title {
   text-decoration: none;
   color: rgba(239, 0, 142, 0.6);
@@ -181,6 +120,8 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 .page-navigation__item {
   padding: 5px 0;
 }
+
+/* LINKS--------------------------------------- */
 
 .social-links__link {
   text-decoration: none;
@@ -201,6 +142,8 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   margin: 75px 0;
   letter-spacing: 7px;
 }
+
+/* ABOUT ------------------------------- */
 
 .about-section__img {
   width: 50vw;
@@ -241,6 +184,20 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   line-height: 150%;
 }
 
+/* CONCERTS ----------------------------- */
+
+.concerts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 66vw;
+  margin-left: auto;
+}
+
+.concerts__item {
+  margin-bottom: 3vw;
+}
+
 @supports (display: grid) {
   .concerts {
     display: grid;
@@ -248,21 +205,7 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
     grid-template-rows: repeat(2, auto);
     column-gap: 6vw;
     row-gap: 3vw;
-    margin-left: auto;
-  }
-}
-
-@supports not (display: grid) {
-  .concerts {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 66vw;
-    margin-left: auto;
-  }
-
-  .concerts__item {
-    margin-bottom: 3vw;
+    width: 100%;
   }
 }
 
@@ -319,6 +262,8 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   margin: 0;
 }
 
+/* VIDEO ------------------------------ */
+
 .video {
   display: block;
   margin-left: auto;
@@ -326,6 +271,8 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   width: 50vw;
   height: 25vw;
 }
+
+/* PHOTOS ------------------------- */
 
 .gallery {
   display: grid;
@@ -335,6 +282,8 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   row-gap: 20px;
   margin-left: auto;
 }
+
+/* CONTACT ------------------------------- */
 
 .form {
   clear: both;
@@ -389,12 +338,15 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   color: rgba(204, 200, 255, 0.8);
 }
 
+/* MEDIA MAX 1500 PX ---------------------- */
+
 @media (max-width: 1500px) {
-  .band-members {
-    max-width: 580px;
-    margin-top: 100px;
+  .band-members__item {
+    width: 50%;
   }
 }
+
+/* MEDIA MAX 1200 PX ---------------------- */
 
 @media (max-width: 1200px) {
   .about-section__desc {
@@ -452,11 +404,39 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   }
 }
 
-@media (max-width: 1000px) {
-  .band-members {
-    max-width: 300px;
+/* MEDIA MAX 850 PX ---------------------- */
+
+@media (max-width: 850px) {
+  .page-header {
+    position: static;
+    margin: 10px;
+    text-align: center;
+  }
+  .page-footer {
+    position: static;
+    margin: 10px auto;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .page-content {
+    margin: 0;
+    padding: 0;
+  }
+
+  .content-section__header {
+    margin: 30px;
+  }
+  .band-members__image {
+    height: 38vw;
   }
 }
+
+/* MEDIA MAX 650 PX ---------------------- */
+
 @media (max-width: 650px) {
   .form__input {
     width: 40vw;
@@ -480,44 +460,42 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
   .video {
     width: 40vw;
   }
+  .band-members__image {
+    max-height: 250px;
+  }
 }
 
-@media (max-width: 360px) {
-  .page-header {
-    position: static;
-    margin: 10px;
-  }
-  .page-footer {
-    position: static;
-    margin: 10px auto;
-  }
+/* MEDIA MAX 360 PX ---------------------- */
 
-  .social-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  .page-content {
-    margin: 0;
-    padding: 0;
+@media (max-width: 360px) {
+  body {
+    background-image: none;
   }
 
   .content-section__header {
     margin: 30px;
   }
   .band-members {
-    flex-direction: column;
-    align-items: flex-start;
+    display: block;
+    font-size: 0;
+    letter-spacing: 0;
+    word-spacing: 0;
+    text-align: center;
   }
   .band-members__image {
     opacity: 100%;
     max-height: 250px;
   }
   .band-members__item {
-    margin: 15px;
+    display: inline-block;
+    padding: 15px;
   }
   .band-members__description {
     opacity: 100%;
+  }
+
+  .about-section {
+    min-height: 750px;
   }
 
   .about-section__img {
