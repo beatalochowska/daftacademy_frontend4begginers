@@ -56,6 +56,22 @@ ul {
   display: block;
 }
 
+.fun {
+  color: #ccc8ff;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.button__holder > .fun {
+  display: none;
+}
+.button__holder.button__off > .button {
+  display: none;
+}
+.button__holder.button__off > .fun {
+  display: block;
+}
+
 /* HOME --------------------------------------------------------------- */
 
 .band-members {

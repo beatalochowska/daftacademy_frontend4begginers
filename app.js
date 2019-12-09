@@ -5,6 +5,7 @@
     const navItems = document.querySelectorAll(".page-navigation__item");
     const buyButtons = document.querySelectorAll(".button");
     const links = document.querySelectorAll(".page-navigation__title");
+    const fun = document.querySelectorAll(".fun");
 
     burger.addEventListener("click", () => {
       nav.classList.toggle("page-navigation__active");
@@ -20,16 +21,20 @@
       burger.classList.toggle("toggle");
     });
 
+    const buttonHolders = document.querySelectorAll(".button__holder");
+    buttonHolders.forEach(holder => {
+      const childButton = holder.querySelector("button");
+      console.log(childButton);
+
+      childButton.addEventListener("click", function() {
+        holder.classList.add("button__off");
+      });
+    });
+
     links.forEach(item => {
       item.addEventListener("click", event => {
         nav.classList.remove("page-navigation__active");
         burger.classList.remove("toggle");
-      });
-    });
-
-    buyButtons.forEach(item => {
-      item.addEventListener("click", event => {
-        event.target.style.display = "none";
       });
     });
   });
