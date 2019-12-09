@@ -562,7 +562,7 @@ ul {
   }
 
   .page-navigation__item {
-    opacity: 0;
+    opacity: 1;
   }
 
   .burger {
