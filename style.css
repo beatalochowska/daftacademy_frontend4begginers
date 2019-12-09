@@ -523,6 +523,10 @@ ul {
     transform: translateX(100%);
   }
 
+  .buttonDelete {
+    opacity: 0;
+  }
+
   @keyframes navFade {
     from {
       opacity: 0;
