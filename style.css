@@ -4,6 +4,9 @@
 
 body {
   background-color: #25072e;
+  color: rgba(204, 200, 255, 0.8);
+  font-size: 13px;
+  font-weight: normal;
   margin: 0;
   padding: 0;
   background-image: url("images/background.svg");
@@ -243,8 +246,32 @@ ul {
   border-bottom: 5px solid #ef008e;
 }
 
+@keyframes gallery-image {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: rotate(15deg) scale(1.05);
+    transform-origin: 50% 50%;
+  }
+  100% {
+    transform: rotate(0);
+    transform-origin: 50% 50%;
+  }
+}
+
+.gallery__item > .concerts__image {
+  transition: filter 1s ease-in-out;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
 .gallery__item > .concerts__image:hover {
-  transform: scale(1.05);
+  animation-name: gallery-image;
 }
 
 .concerts__info {
